@@ -3,6 +3,7 @@ package com.example.movieapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -15,19 +16,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // 객체 생성은 여기서
-        imageView = (ImageView) findViewById(R.id.imageView);
-        imageView2 = (ImageView) findViewById(R.id.imageView2);
+        //imageView = (ImageView) findViewById(R.id.imageView);
+
     }
 
     public void onButton1clicked(View v) {
 
         if(index == 0){
-            imageView2.setVisibility(View.VISIBLE);
-            imageView.setVisibility(View.GONE);
+
             index = 1;
-        }else if(index == 1){
-            imageView2.setVisibility(View.GONE);
-            imageView.setVisibility(View.VISIBLE);
+        }else{
+
+            Log.d("TAG","제대로 로딩완료");
             index = 0;
         }
     }
